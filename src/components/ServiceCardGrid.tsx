@@ -2,21 +2,21 @@ import { ServiceCard } from "@/components/ServiceCard";
 import type { Service } from "@/lib/types/Service";
 
 export function ServiceCardGrid({
-	services,
-	onSelectService,
+  services,
+  onSelectService,
 }: {
-	services: Service[];
-	onSelectService: (s: Service) => void;
+  services: Service[];
+  onSelectService: (s: Service) => void;
 }) {
-	return (
-		<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
-			{services.map((service) => (
-				<ServiceCard
-					key={service.id}
-					service={service}
-					onClick={onSelectService}
-				/>
-			))}
-		</div>
-	);
+  return (
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
+      {services.map((service) => (
+        <ServiceCard
+          key={service.id}
+          service={service}
+          onClick={onSelectService}
+        />
+      ))}
+    </div>
+  );
 }
